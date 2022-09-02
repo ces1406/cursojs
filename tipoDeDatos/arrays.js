@@ -180,10 +180,12 @@ console.log('a2.fill(5)');
 a2.fill(5);
 console.log('a2: ',JSON.stringify(a2));
 
+//-----------------a4.copyWithin(posDondeInsertar,posInicialACopiar,posFinalACopiar)------------------------
+//-------------------------------------modifica al propio vector--------------------------------------------
 console.log("\x1b[32m%s\x1b[0m", '-------------------------- COPYWITHIN ------------------------------');
 console.log('a4: ',JSON.stringify(a4));
-let vec9 = a4.copyWithin(2,7,11);
-console.log('let array = a4.copyWithin(posDondeCopiar,posInicialACopiar,posFinalACopiar): ');
+let vec9 = a4.copyWithin(0,11,12);
+console.log('let array = a4.copyWithin(posDondeInsertar,posInicialACopiar,posFinalACopiar): ');
 console.log('a4.copyWithin(2,3,5)-->en la pos 2 copia los elementos de las pos:3,4 (5 NO) ');
 console.log('a4: ',JSON.stringify(a4));
 console.log('aM: ',JSON.stringify(vec9));
