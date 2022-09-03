@@ -81,6 +81,13 @@ let aa22= a2.shift();
 console.log('let aa2 = a2.shift()\naa2= ',aa22);
 console.log('a2=',JSON.stringify(a2));
 
+//----------------------------------------for(item in iterable)----------------------------------------------------
+console.log("\x1b[32m%s\x1b[0m", '---------------------------- FOR IN -------------------------------');
+let iterable0=[{prop1:'luis',prop2:33},{prop1:'Sandra',prop2:33,prop3:false},{prop1:'Marok',prop3:false}];
+for(item in iterable0){
+    console.log('item: '+item)
+}
+
 //----------------------------------------for(item of iterable)----------------------------------------------------
 console.log("\x1b[32m%s\x1b[0m", '---------------------------- FOR OF -------------------------------');
 for([i,item] of a4.entries()){
