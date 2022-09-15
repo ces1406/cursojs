@@ -1,8 +1,8 @@
-var ciudades =['Buenos Aires','Cordoba','La Plata','Rosario','Usuahia']
+var ciudades =['Buenos Aires','Cordoba','La Plata','Rosario','Usuahia'];
 
 // Esto también es una callback:
 function callback1 (param){
-    console.log('ciudad de --> '+param)
+    console.log('ciudad de --> '+param);
 }
 //ciudades.forEach(callback1)
 
@@ -14,20 +14,23 @@ function callback1 (param){
 var fs = require('fs');
 var timestamp = new Date().toString();
 var contents;
+
+console.log("\x1b[32m%s\x1b[0m", '----------------------------- sincrono -------------------------------');
 // Escritura y lectura del mismo archivo de forma sincrona (sino->error)
 fs.writeFileSync('date.txt',timestamp);
 contents = fs.readFileSync('date.txt');
-console.log('Se leyó el archivo creado: '+contents)
+console.log('Se leyó el archivo creado: '+contents);
 fs.unlink('date.txt',err=> { if (err) throw err; });
 
+console.log("\x1b[32m%s\x1b[0m", '---------------------------- asincrono -------------------------------');
 // Ejemplo asíncrono (mejor dicho usando funciones asíncronas + callbacks) en Node:
 fs.writeFile('date2.txt','OTRA COSA',err=>{
     if (err) throw err;
     fs.readFile('date2.txt',(err,contenido)=>{
         if(err) throw err;
-        console.log('contenido pseudo-asincrono: '+contenido)
+        console.log('contenido pseudo-asincrono: '+contenido);
         fs.unlink('date2.txt',err=> { if (err) throw err; });
-    })
-})
+    });
+});
 
-console.log('SOY LA ULTIMA LINEA DEL SCRIPT ')
+console.log('SOY LA ULTIMA LINEA DEL SCRIPT ');
