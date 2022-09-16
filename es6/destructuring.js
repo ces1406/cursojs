@@ -20,26 +20,26 @@ console.log('-------------');
 
 // Destructuring en objetos:
 const objeto1 ={ a:'casa', b:'departamento', c:'choza' };
-const {a} = objeto1
-console.log('a->',a)
-console.log('-------------')
-const {a:prop1,b:prop2} = objeto1
-console.log('prop1->',prop1)
-console.log('prop2->',prop2)
-console.log('-------------')
+const {a} = objeto1; // = const a = objeto1.a;
+console.log('a->',a);
+console.log('-------------');
+const {a:prop1,b:prop2} = objeto1;
+console.log('prop1->',prop1);
+console.log('prop2->',prop2);
+console.log('-------------');
 
 // Funcion sin parametro por defecto:
 function adornar1(param){
     console.log('hola---->'+param+'<----')
 }
-adornar1('luli')
-adornar1()
-console.log('-------------')
+adornar1('luli');
+adornar1();
+console.log('-------------');
 
 // Funcion con parametro por defecto:
 function adornar2 (param = 'vacio') {
     console.log('hola2->'+param+'<-')
 }
-adornar2('luli')
-adornar2()
-console.log('-------------')
+adornar2('luli');
+adornar2();
+console.log('-------------');
