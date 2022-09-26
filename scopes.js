@@ -73,4 +73,3 @@ for (var index = 0; index < 3; index++) {
 for (let index = 0; index < 3; index++) {
     setTimeout(()=>{console.log('index:',index),1500})    
 }
-
